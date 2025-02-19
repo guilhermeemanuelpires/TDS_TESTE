@@ -19,16 +19,39 @@ function consultaTodasAsPessoas() {
     return pessoas;
 }
 
-function deletaPessoa(id){
-    
+function deletaPessoa(id) {
+    // Pesquisar qual é a posição do item no ArrayList
+    var teveRetorno = true;
+    for (let i = 0; i < pessoas.length; i++) {
+        if (pessoas[i].id == id) {
+            pessoas.splice(i, 1);
+            return "Pessoa deletada com sucesso!";
+        } else {
+            teveRetorno = false;
+        }
+    }
+
+    if (!teveRetorno) {
+        return "Código da pessoa é inválido!";
+    }
+}
+
+function consultaPessoaID(id) {
+    return pessoas.filter(item => item.id == id);
+}
+
+function atualizaPessoa(id, nome, idade) {
+
 }
 
 module.exports = {
     cadastraPessoa,
-    consultaTodasAsPessoas
+    consultaTodasAsPessoas,
+    deletaPessoa,
+    consultaPessoaID
 }
 
- 
+
 // console.log(cadastraPessoa("Guilherme", 27));
 // console.log(cadastraPessoa("Iagor", 18));
 // console.log(cadastraPessoa("Guilherme Meurer", 16));

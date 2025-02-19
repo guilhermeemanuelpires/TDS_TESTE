@@ -11,3 +11,9 @@ pessoa.cadastraPessoa("Larissa", 17)
 pessoa.cadastraPessoa("Moreira", 17)
 
 console.log(pessoa.consultaTodasAsPessoas());
+
+pessoa.deletaPessoa(3);
+
+console.log(pessoa.consultaTodasAsPessoas());
+
+console.log(pessoa.consultaPessoaID(4));
