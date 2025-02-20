@@ -42,13 +42,29 @@ function consultaPessoaID(id) {
 
 function atualizaPessoa(id, nome, idade) {
 
+    var teveRetorno = true;
+    for (let i = 0; i < pessoas.length; i++) {
+        if (pessoas[i].id == id) {
+            pessoas[i].nome = nome;
+            pessoas[i].idade = idade;
+            return pessoas[i];
+        } else {
+            teveRetorno = false;
+        }
+    }
+
+    if (!teveRetorno) {
+        return "O código da pessoa é inválido!";
+    }
+
 }
 
 module.exports = {
     cadastraPessoa,
     consultaTodasAsPessoas,
     deletaPessoa,
-    consultaPessoaID
+    consultaPessoaID,
+    atualizaPessoa
 }
 
 
@@ -62,3 +78,4 @@ module.exports = {
 // console.log(cadastraPessoa("Larissa", 17));
 // console.log(cadastraPessoa("Moreira", 17));
 // console.log(consultaTodasAsPessoas());
+
