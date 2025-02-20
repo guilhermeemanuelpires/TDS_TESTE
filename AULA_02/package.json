@@ -1,0 +1,17 @@
+{
+  "name": "aula_02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Guilherme Pires",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

@@ -45,8 +45,14 @@ console.log(data);
 const pessoa = {
     id: 1,
     nome: "Guilherme",
-    idade: 27 
+    idade: 27
 }
 
 console.log(pessoa);
 console.log(pessoa.idade);
+
+module.exports = {
+    somaDeDoisValores,
+    multiplicacaoDeDoisValores,
+    divisaoDeDoisValores
+}
